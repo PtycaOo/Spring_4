@@ -22,9 +22,9 @@ public class userController {
     }
 
     @GetMapping("/{id}")
-    public String getUser(@PathVariable Long id,Model model){
-        model.addAttribute("users",userService.getById(id));
-        return "usersProfile";
+    public String getUser(@PathVariable Long id, Model model){
+        model.addAttribute("user", userService.getById(id));
+        return "userProfile";
     }
 
 }
