@@ -11,6 +11,9 @@ public class UserService {
     private UserRepository userRepository;
 
     public List<User> getAllUsers(){
+        userRepository.save(new User(null,"Nikita","asdsad1"));
+        userRepository.save(new User(null,"Gosha","aefgdfa"));
+        userRepository.save(new User(null,"dasha","asxfvf"));
         return userRepository.findAll();
     }
 
