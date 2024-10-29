@@ -1,8 +1,9 @@
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8">
     User list
 </head>
-
 <body>
 <h1>Users:</h1>
 <table>
@@ -12,7 +13,7 @@
         <th>Email</th>
     </tr>
 
-    <tr th:each="user : ${users}">
+    <tr th:each="${users}">
         <td th:text="${user.id}"></td>
         <td><a th:href="@{/users/{id}(id=${user.id})}" th:text="${user.name}"></a></td>
         <td th:text="${user.email}"></td>
@@ -20,6 +21,4 @@
 
 </table>
 </body>
-
-
 </html>

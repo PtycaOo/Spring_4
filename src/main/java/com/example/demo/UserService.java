@@ -9,6 +9,7 @@ import java.util.Optional;
 @Service
 public class UserService {
 
+    @Autowired
     private UserRepository userRepository;
 
     public UserService(UserRepository userRepository) {
@@ -23,9 +24,6 @@ public class UserService {
         return userRepository.findById(id);
     }
 
-    public User getName(String name){
-        return userRepository.findByName(name);
-    }
 
     public User save(User user){
         return userRepository.save(user);
